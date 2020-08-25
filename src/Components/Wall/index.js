@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "../Brick/index";
+import Brick from "../Brick/index";
 
 import "./style.css";
 
