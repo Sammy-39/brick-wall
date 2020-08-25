@@ -10,7 +10,7 @@ class Wall extends React.Component{
         super(props);
         this.state = {
             bricks: [1,2,3,4] ,
-            colors: ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
+            colors: ['#0088FE', '#00C49F', '#FFBB28', '#FF8042' ,'#bfff00']
         };
         
     }
