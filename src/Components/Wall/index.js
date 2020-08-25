@@ -30,6 +30,14 @@ class Wall extends React.Component{
         });
     };
 
+    deleteBrick = () => {
+        this.setState(
+            {
+                bricks: this.state.bricks.slice(0,this.state.bricks.length-1)
+            }
+        )
+    }
+
     onBrickClick = (number) => {
         window.alert("You clicked Brick " + number)
     };
@@ -46,8 +54,14 @@ class Wall extends React.Component{
                 }
 
             <div className="add-btn-box">
-                <button onClick={this.addBrick} className="add-btn">
+                <button onClick={this.addBrick} className="add-del-btn">
                     +
+                </button>
+            </div>
+
+            <div className="del-btn-box">
+                <button onClick={this.deleteBrick} className="add-del-btn">
+                    -
                 </button>
             </div>
             </div>

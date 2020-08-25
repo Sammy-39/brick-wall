@@ -12,12 +12,12 @@
   .add-btn-box {
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 575px;
     width: auto;
     height: auto;
   }
   
-  .add-btn {
+  .add-del-btn {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -26,4 +26,12 @@
     color: white;
     border: none;
     cursor: pointer;
+  }
+
+  .del-btn-box {
+    position: fixed;
+    bottom: 10px;
+    left: 575px;
+    width: auto;
+    height: auto;
   }
