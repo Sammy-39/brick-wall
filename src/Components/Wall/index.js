@@ -9,8 +9,10 @@ class Wall extends React.Component{
     {
         super(props);
         this.state = {
-            bricks: [1,2,3,4]
+            bricks: [1,2,3,4] ,
+            colors: ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
         };
+        
     }
 
     addBrick = () => {
@@ -18,13 +20,18 @@ class Wall extends React.Component{
 
         newBricks.push(newBricks.length+1);
 
+        const newColors = [...this.state.colors];
+
+        newColors.push(this.state.colors[newColors.length%4])
+
         this.setState({
-            bricks: newBricks
+            bricks: newBricks ,
+            colors: newColors
         });
     };
 
     onBrickClick = (number) => {
-        window.alert("You clicked Brick" + number)
+        window.alert("You clicked Brick " + number)
     };
 
     render = () =>
@@ -34,7 +41,7 @@ class Wall extends React.Component{
             <div className="wall-container">
                 {
                     this.state.bricks.map((num) => {
-                        return <Brick onClick ={this.onBrickClick} number={num} />;
+                        return <Brick onClick ={this.onBrickClick} number={num} color = {this.state.colors[num-1]} />;
                     })
                 }
 
